@@ -10,7 +10,7 @@ import retrofit2.HttpException
 
 class RepositoryImpl(private val remoteServiceHelper: RemoteServiceHelper) : Repository {
 
-    val weatherForecastLiveData: MutableLiveData<MutableList<Weather>> = MutableLiveData()
+    val weatherForecastLiveData: MutableLiveData<List<Weather>> = MutableLiveData()
 
     override fun getWeatherForecast() {
         val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
@@ -23,7 +23,7 @@ class RepositoryImpl(private val remoteServiceHelper: RemoteServiceHelper) : Rep
 
         launch(exceptionHandler) {
             val weatherApiResponse = remoteServiceHelper.getWeatherForecast().await()
-            weatherApiResponse.city?.list?.weather?.let {
+            weatherApiResponse.apiList?.get(0)?.weather?.let {
                 weatherForecastLiveData.postValue(it)
             }
         }

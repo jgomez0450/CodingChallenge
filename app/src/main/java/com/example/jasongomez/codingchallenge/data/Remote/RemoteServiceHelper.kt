@@ -16,7 +16,7 @@ class RemoteServiceHelper {
     fun getWeatherForecast(): Deferred<WeatherApiResponse> {
         val retrofit = getRetrofit(Constants.WEATHER_API_BASE_URL)
         val service = retrofit.create(RemoteService::class.java)
-        return service.getWeatherForecast("5210847")
+        return service.getWeatherForecast("5210847", "b82b90e31b3b9b2723540c4b31afb584")
     }
 
     private fun getRetrofit(baseUrl: String): Retrofit {

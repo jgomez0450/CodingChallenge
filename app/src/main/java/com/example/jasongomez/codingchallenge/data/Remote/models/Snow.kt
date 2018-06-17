@@ -3,10 +3,10 @@ package com.example.jasongomez.codingchallenge.data.Remote.models
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class Sys {
+class Snow {
 
-    @SerializedName("pod")
+    @SerializedName("3h")
     @Expose
-    var pod: String? = null
+    var threeH:Double? = null
 
 }

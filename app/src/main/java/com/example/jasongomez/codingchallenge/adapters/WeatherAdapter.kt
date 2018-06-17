@@ -8,7 +8,7 @@ import com.example.jasongomez.codingchallenge.R
 import com.example.jasongomez.codingchallenge.data.Remote.models.Weather
 import com.example.jasongomez.codingchallenge.databinding.RecyclerViewItemBinding
 
-class WeatherAdapter(private val weatherList: MutableList<Weather>) : RecyclerView.Adapter<WeatherAdapter.ViewHolder>() {
+class WeatherAdapter(private val weatherList: List<Weather>) : RecyclerView.Adapter<WeatherAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeatherAdapter.ViewHolder {
         val itemBinding = DataBindingUtil.inflate<RecyclerViewItemBinding>(LayoutInflater.from(parent.context), R.layout.recycler_view_item, parent, false)

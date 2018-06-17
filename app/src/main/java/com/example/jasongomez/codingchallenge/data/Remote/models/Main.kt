@@ -16,18 +16,18 @@ class Main {
     var tempMax: Double? = null
     @SerializedName("pressure")
     @Expose
-    var pressure: Double? = null
+    var pressure: Float? = null
     @SerializedName("sea_level")
     @Expose
     var seaLevel: Double? = null
     @SerializedName("grnd_level")
     @Expose
-    var grndLevel: Double? = null
+    var grndLevel: Float? = null
     @SerializedName("humidity")
     @Expose
-    var humidity: Int? = null
+    var humidity: Float? = null
     @SerializedName("temp_kf")
     @Expose
-    var tempKf: Double? = null
+    var tempKf: Float? = null
 
 }

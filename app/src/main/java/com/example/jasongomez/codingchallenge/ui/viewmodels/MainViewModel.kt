@@ -18,7 +18,7 @@ class MainViewModel(context: Application) : AndroidViewModel(context) {
         (context as AppController).applicationComponent?.inject(this)
     }
 
-    fun getWeatherForecast(): LiveData<MutableList<Weather>> {
+    fun getWeatherForecast(): LiveData<List<Weather>> {
         repository.getWeatherForecast()
         return (repository as RepositoryImpl).weatherForecastLiveData
     }

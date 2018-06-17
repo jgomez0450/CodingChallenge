@@ -8,5 +8,5 @@ import retrofit2.http.Query
 interface RemoteService {
 
     @GET("forecast")
-    fun getWeatherForecast(@Query("id") cityId:String): Deferred<WeatherApiResponse>
+    fun getWeatherForecast(@Query("id") cityId:String, @Query("APPID") apiKey:String): Deferred<WeatherApiResponse>
 }

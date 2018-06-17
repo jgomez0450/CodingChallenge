@@ -3,7 +3,7 @@ package com.example.jasongomez.codingchallenge.data.Remote.models
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class List {
+class ApiList {
 
     @SerializedName("dt")
     @Expose
@@ -13,13 +13,16 @@ class List {
     var main: Main? = null
     @SerializedName("weather")
     @Expose
-    var weather: MutableList<Weather>? = null
+    var weather: List<Weather>? = null
     @SerializedName("clouds")
     @Expose
     var clouds: Clouds? = null
     @SerializedName("wind")
     @Expose
     var wind: Wind? = null
+    @SerializedName("snow")
+    @Expose
+    var snow: Snow? = null
     @SerializedName("sys")
     @Expose
     var sys: Sys? = null

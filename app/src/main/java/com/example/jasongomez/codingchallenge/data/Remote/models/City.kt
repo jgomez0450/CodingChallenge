@@ -3,7 +3,7 @@ package com.example.jasongomez.codingchallenge.data.Remote.models
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class City internal constructor() {
+class City {
 
     @SerializedName("id")
     @Expose
@@ -17,16 +17,5 @@ class City internal constructor() {
     @SerializedName("country")
     @Expose
     var country: String? = null
-    @SerializedName("cod")
-    @Expose
-    var cod: String? = null
-    @SerializedName("message")
-    @Expose
-    var message: Double? = null
-    @SerializedName("cnt")
-    @Expose
-    var cnt: Int? = null
-    @SerializedName("list")
-    @Expose
-    var list:List? = null
+
 }
