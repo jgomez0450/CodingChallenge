@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun injectDependencies() {
-        (application as AppController).createApplicationComponent()?.newFragmentComponent(ActivityModule(this))?.inject(this)
+        (application as AppController).createApplicationComponent()?.newActivityComponent(ActivityModule(this))?.inject(this)
     }
 
     private fun setUpObservers() {

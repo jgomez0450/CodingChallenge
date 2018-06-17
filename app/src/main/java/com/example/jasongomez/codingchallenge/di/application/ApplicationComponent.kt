@@ -9,7 +9,7 @@ import dagger.Component
 @Component(modules = [ApplicationModule::class])
 interface ApplicationComponent {
 
-    fun newFragmentComponent(activityModule: ActivityModule): ActivityComponent
+    fun newActivityComponent(activityModule: ActivityModule): ActivityComponent
 
     fun inject(mainViewModel: MainViewModel)
 }

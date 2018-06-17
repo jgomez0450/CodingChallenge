@@ -2,7 +2,7 @@ package com.example.jasongomez.codingchallenge.data.RepositoryModule
 
 import android.arch.lifecycle.MutableLiveData
 import com.example.jasongomez.codingchallenge.data.Remote.RemoteServiceHelper
-import com.example.jasongomez.codingchallenge.data.Remote.models.Weather
+import com.example.jasongomez.codingchallenge.data.Remote.models.ApiList
 import com.example.jasongomez.codingchallenge.interfaces.Repository
 import kotlinx.coroutines.experimental.CoroutineExceptionHandler
 import kotlinx.coroutines.experimental.launch
@@ -10,7 +10,7 @@ import retrofit2.HttpException
 
 class RepositoryImpl(private val remoteServiceHelper: RemoteServiceHelper) : Repository {
 
-    val weatherForecastLiveData: MutableLiveData<List<Weather>> = MutableLiveData()
+    val weatherForecastLiveData: MutableLiveData<List<ApiList>> = MutableLiveData()
 
     override fun getWeatherForecast() {
         val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
@@ -23,11 +23,7 @@ class RepositoryImpl(private val remoteServiceHelper: RemoteServiceHelper) : Rep
 
         launch(exceptionHandler) {
             val weatherApiResponse = remoteServiceHelper.getWeatherForecast().await()
-            weatherApiResponse.apiList?.get(0)?.weather?.let {
-                weatherForecastLiveData.postValue(it)
-            }
+            weatherForecastLiveData.postValue(weatherApiResponse.apiList)
         }
     }
-
-
 }
