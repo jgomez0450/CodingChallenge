@@ -1,1 +1,4 @@
 # CodingChallenge
+In the project, you'll notice that I have a database directory where I started setting up some of the components necessary to use Room. This is one of the things I would implement if I had more time. As it is right now, each time data is added to the recyclerview it's coming from the openWeatherApi. This is obviously bad design. If I had more time, I would cache the network data in the database using Room and would set up some type of polling mechanism to refresh the data every 3 hours. I would return a LiveData object from the database, that way the information in the recyclerview would be updated automatically each time the cached data was updated. In addition to persisting the network data, given more time, I would add more unit tests and work on improving the user experience.
+
+To run/build the project simply clone the repo and run it on your local emulator or physical device. 
