@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CodingChallenge</string>
+    <string name="all_weatherMain">"The weather will be mainly %s on %s at %s"</string>
 </resources>

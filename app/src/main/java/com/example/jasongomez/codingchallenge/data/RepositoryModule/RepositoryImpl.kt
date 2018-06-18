@@ -3,7 +3,6 @@ package com.example.jasongomez.codingchallenge.data.RepositoryModule
 import android.arch.lifecycle.MutableLiveData
 import com.example.jasongomez.codingchallenge.data.Remote.RemoteServiceHelper
 import com.example.jasongomez.codingchallenge.data.Remote.models.ApiList
-import com.example.jasongomez.codingchallenge.interfaces.Repository
 import kotlinx.coroutines.experimental.CoroutineExceptionHandler
 import kotlinx.coroutines.experimental.launch
 import retrofit2.HttpException

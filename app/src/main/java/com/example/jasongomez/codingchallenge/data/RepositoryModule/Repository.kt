@@ -1,4 +1,4 @@
-package com.example.jasongomez.codingchallenge.interfaces
+package com.example.jasongomez.codingchallenge.data.RepositoryModule
 
 import android.arch.lifecycle.LiveData
 

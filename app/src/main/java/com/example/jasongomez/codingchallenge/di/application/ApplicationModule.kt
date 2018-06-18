@@ -4,7 +4,7 @@ import android.content.Context
 import com.example.jasongomez.codingchallenge.AppController
 import com.example.jasongomez.codingchallenge.data.Remote.RemoteServiceHelper
 import com.example.jasongomez.codingchallenge.data.RepositoryModule.RepositoryImpl
-import com.example.jasongomez.codingchallenge.interfaces.Repository
+import com.example.jasongomez.codingchallenge.data.RepositoryModule.Repository
 import dagger.Module
 import dagger.Provides
 

@@ -12,5 +12,4 @@ class ApiListEntity(@ColumnInfo(name = "Dt") var dt: Int, @ColumnInfo(name = "Ma
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
 
-
 }

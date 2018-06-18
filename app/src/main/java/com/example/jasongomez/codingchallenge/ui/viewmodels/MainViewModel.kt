@@ -7,7 +7,7 @@ import android.arch.lifecycle.Transformations
 import com.example.jasongomez.codingchallenge.AppController
 import com.example.jasongomez.codingchallenge.data.Remote.models.Weather
 import com.example.jasongomez.codingchallenge.data.RepositoryModule.RepositoryImpl
-import com.example.jasongomez.codingchallenge.interfaces.Repository
+import com.example.jasongomez.codingchallenge.data.RepositoryModule.Repository
 import javax.inject.Inject
 
 class MainViewModel(context: Application) : AndroidViewModel(context) {
@@ -23,7 +23,12 @@ class MainViewModel(context: Application) : AndroidViewModel(context) {
         repository.getWeatherForecast()
         return Transformations.map((repository as RepositoryImpl).weatherForecastLiveData) { apiList ->
             val weatherList: MutableList<List<Weather>> = mutableListOf()
-            apiList?.forEach { it.weather?.let { it1 -> weatherList.add(it1) } }
+            apiList?.forEach { apiListIt ->
+                apiListIt.weather?.let {
+                    it[0].date = apiListIt.dtTxt
+                    weatherList.add(it)
+                }
+            }
             weatherList
         }
     }

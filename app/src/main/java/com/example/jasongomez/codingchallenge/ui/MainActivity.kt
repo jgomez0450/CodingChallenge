@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             it?.let {
                 binding!!.recyclerView.apply {
                     layoutManager = LinearLayoutManager(context)
-                    adapter = WeatherAdapter(it)
+                    adapter = WeatherAdapter(it, this@MainActivity)
                     itemAnimator = DefaultItemAnimator()
                 }
             }
